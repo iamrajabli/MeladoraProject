@@ -1,0 +1,43 @@
+#slider {
+
+    position: absolute;
+    bottom: -25%;
+
+    .slider__item {
+        width: 350px;
+        height: 250px;
+        background-color: $c-white;
+        box-shadow: 0 0 9px 0 rgba(0, 0, 0, .3);
+
+        h1 {
+            color: $c-dark-green;
+            font-size: $font-size-lg;
+        }
+
+        span {
+            color: $c-green;
+        }
+
+
+    }
+
+    .ananas {
+        background-image: url('/src/resources/img/ananas-bg.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .vegetables {
+        background-image: url('/src/resources/img/and-bg.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+
+    }
+
+    .and {
+        background-image: url('/src/resources/img/and-bg.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+
+    }
+}
