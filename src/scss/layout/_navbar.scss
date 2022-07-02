@@ -1,6 +1,62 @@
 #navbar {
-    a, i {
+    ul {
+        display: flex;
+    }
+
+    a,
+    i {
         color: $c-white;
     }
-    
+
+    .burger__menu {
+        display: none;
+        font-size: $font-size-xl;
+    }
+}
+
+
+@media (max-width: $breakpoint-sm) {
+
+    #navbar {
+        img {
+            width: 95px;
+            height: 40px;
+        }
+
+        .burger__menu {
+            display: flex;
+
+            i {
+                font-size: $font-size-lg;
+            }
+
+
+        }
+    }
+
+}
+
+@media (max-width: $breakpoint-lg) {
+    #navbar {
+        ul {
+            display: none;
+            flex-direction: column;
+            background-color: $c-green;
+            padding: $padding;
+            position: absolute;
+            top: 130px;
+            width: 720px;
+            box-sizing: border-box;
+            gap: 20px;
+
+            li:last-child {
+                display: none;
+            }
+        }
+
+        .burger__menu {
+            display: flex;
+        }
+    }
+
 }

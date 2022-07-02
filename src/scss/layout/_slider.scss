@@ -45,6 +45,10 @@
     #slider {
         bottom: -100%;
 
+        .container {
+            width: 478px !important;
+        }
+
         .row {
             display: block;
         }
@@ -55,6 +59,7 @@
             img {
                 right: 10px;
             }
+
             h1 {
                 font-size: $font-size-xxl;
             }
@@ -63,6 +68,7 @@
                 font-size: $font-size-xl;
 
             }
+
             .slider__content {
                 margin-left: 30px;
             }
@@ -86,6 +92,7 @@
             img {
                 right: 50px;
             }
+
             h1 {
                 font-size: $font-size-xxl;
             }
@@ -94,6 +101,7 @@
                 font-size: $font-size-xl;
 
             }
+
             .slider__content {
                 margin-left: 30px;
             }
@@ -117,6 +125,7 @@
             img {
                 right: 50px;
             }
+
             h1 {
                 font-size: $font-size-xxl;
             }
@@ -125,6 +134,7 @@
                 font-size: $font-size-xl;
 
             }
+
             .slider__content {
                 margin-left: 30px;
             }
@@ -156,4 +166,3 @@
         }
     }
 }
-

@@ -3,3 +3,17 @@
         color: $c-white;
     }
 }
+
+@media (max-width: $breakpoint-sm) {
+    #header-top {
+        span {
+            font-size: $font-size-md;
+        }
+
+        img {
+            width: 15px;
+            height: 15px;
+        }
+
+    }
+}
