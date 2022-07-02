@@ -4,7 +4,6 @@
     bottom: -25%;
 
     .slider__item {
-        width: 350px;
         height: 250px;
         background-color: $c-white;
         box-shadow: 0 0 9px 0 rgba(0, 0, 0, .3);
@@ -41,3 +40,120 @@
 
     }
 }
+
+@media (max-width: $breakpoint-sm) {
+    #slider {
+        bottom: -100%;
+
+        .row {
+            display: block;
+        }
+
+        .slider__item {
+            margin-bottom: 20px;
+
+            img {
+                right: 10px;
+            }
+            h1 {
+                font-size: $font-size-xxl;
+            }
+
+            span {
+                font-size: $font-size-xl;
+
+            }
+            .slider__content {
+                margin-left: 30px;
+            }
+        }
+
+    }
+
+}
+
+@media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+    #slider {
+        bottom: -100%;
+
+        .row {
+            display: block;
+        }
+
+        .slider__item {
+            margin-bottom: 20px;
+
+            img {
+                right: 50px;
+            }
+            h1 {
+                font-size: $font-size-xxl;
+            }
+
+            span {
+                font-size: $font-size-xl;
+
+            }
+            .slider__content {
+                margin-left: 30px;
+            }
+        }
+
+    }
+
+}
+
+@media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+    #slider {
+        bottom: -100%;
+
+        .row {
+            display: block;
+        }
+
+        .slider__item {
+            margin-bottom: 20px;
+
+            img {
+                right: 50px;
+            }
+            h1 {
+                font-size: $font-size-xxl;
+            }
+
+            span {
+                font-size: $font-size-xl;
+
+            }
+            .slider__content {
+                margin-left: 30px;
+            }
+        }
+
+    }
+
+}
+
+@media (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {
+    #slider {
+        .ananas {
+            img {
+                width: 240px;
+                height: 200px;
+            }
+        }
+
+        .vegetables {
+            img {
+                bottom: -20px;
+            }
+        }
+
+        .and {
+            img {
+                width: 320px;
+            }
+        }
+    }
+}
+
