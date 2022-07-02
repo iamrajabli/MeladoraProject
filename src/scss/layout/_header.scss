@@ -2,24 +2,7 @@
     background-image: url('/src/resources/img/banner.svg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: left;
     height: 630px;
-
-    .container {
-        height: 100%;
-
-
-    }
+    
 }
 
-@media (max-width: $breakpoint-sm) {
-
-    #header {
-        .container {
-            width: 95% !important;
-        }
-    }
-
-}
-
-@media (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {}

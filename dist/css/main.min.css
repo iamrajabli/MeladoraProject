@@ -5070,7 +5070,7 @@ html {
 
 @media (max-width: 576px) {
   .container {
-    width: 478px;
+    width: 95%;
   }
   .col-xs-1 {
     width: calc((100% * 1) / 12);
@@ -5282,18 +5282,7 @@ html {
   background-image: url("/src/resources/img/banner.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-x: left;
   height: 630px;
-}
-
-#header .container {
-  height: 100%;
-}
-
-@media (max-width: 576px) {
-  #header .container {
-    width: 95% !important;
-  }
 }
 
 #header-top span {
@@ -5351,8 +5340,9 @@ html {
     background-color: #91B40D;
     padding: 1rem;
     position: absolute;
+    left: 0;
     top: 130px;
-    width: 720px;
+    width: 100%;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     gap: 20px;
@@ -5368,8 +5358,7 @@ html {
 }
 
 #slider {
-  position: absolute;
-  bottom: -25%;
+  margin-top: -100px;
 }
 
 #slider .slider__item {
@@ -5407,36 +5396,26 @@ html {
 }
 
 @media (max-width: 576px) {
-  #slider {
-    bottom: -100%;
-  }
-  #slider .container {
-    width: 478px !important;
-  }
   #slider .row {
     display: block;
   }
   #slider .slider__item {
     margin-bottom: 20px;
   }
-  #slider .slider__item img {
-    right: 10px;
+  #slider .ananas img {
+    width: 200px;
+    height: 180px;
   }
-  #slider .slider__item h1 {
-    font-size: 2.5rem;
+  #slider .vegetables img {
+    width: 200px;
+    height: 180px;
   }
-  #slider .slider__item span {
-    font-size: 1.725rem;
-  }
-  #slider .slider__item .slider__content {
-    margin-left: 30px;
+  #slider .and img {
+    width: 280px;
   }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
-  #slider {
-    bottom: -100%;
-  }
   #slider .row {
     display: block;
   }
@@ -5458,9 +5437,6 @@ html {
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
-  #slider {
-    bottom: -100%;
-  }
   #slider .row {
     display: block;
   }
