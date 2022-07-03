@@ -21,6 +21,8 @@
                 position: relative;
                 text-align: center;
 
+              
+
                 img {
                     width: 100%;
                     object-fit: cover;
@@ -37,8 +39,14 @@
                         line-height: $line-height-lg;
                     }
 
-                    img {
-                        width: 80px;
+                    h1 {
+                        color: rgba(0, 0, 0, .6);
+                        margin-bottom: 20px;
+
+                        font: {
+                            weight: $font-weight-700;
+                            size: 50px
+                        }
                     }
                 }
             }
@@ -65,11 +73,11 @@
                     }
 
                     .garden__content {
-                        img {
-                            height: 90px;
+                        h1 {
+                            margin-bottom: 20px;
                         }
 
-                        top:0;
+                        top:10%;
                     }
                 }
 
@@ -77,8 +85,8 @@
                     width: 100%;
 
                     .garden__content {
-                        img {
-                            height: 90px;
+                        h1 {
+                            margin-bottom: 20px;
                         }
 
                         top:10%;
@@ -132,7 +140,7 @@
                             height: 90px;
                         }
 
-                        top:-10%;
+                        top:10%;
 
                     }
                 }
@@ -159,33 +167,27 @@
     #garden {
         .garden__container {
             .garden__slider {
-           .garden__item {
-            .garden__content {
-                p {
-                    line-height: $line-height-lg;
-                    width: 100%;
+                .garden__item {
+                    .garden__content {
+                        p {
+                            line-height: $line-height-lg;
+                            width: 100%;
+                        }
+                    }
                 }
-            }
-           }
+
                 .garden__first,
                 .garden__third {
                     .garden__content {
-                        img {
-                            height: 90px;
-                        }
-
-                        top:-5%;
-
+                        top:5%;
                     }
                 }
 
                 .garden__second {
 
                     .garden__content {
-                        img {
-                            height: 90px;
-                        }
-                        
+                      
+
                         top:10%;
                     }
                 }
@@ -201,7 +203,7 @@
     #garden {
         .garden__container {
             .garden__slider {
-           
+
                 .garden__first,
                 .garden__third {
                     .garden__content {
@@ -217,9 +219,6 @@
                 .garden__second {
 
                     .garden__content {
-                        img {
-                            height: 90px;
-                        }
 
                         top:10%;
                     }

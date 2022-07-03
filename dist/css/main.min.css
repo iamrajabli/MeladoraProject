@@ -256,8 +256,11 @@ html {
   line-height: 1.25rem;
 }
 
-#garden .garden__container .garden__slider .garden__item .garden__content img {
-  width: 80px;
+#garden .garden__container .garden__slider .garden__item .garden__content h1 {
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 50px;
 }
 
 @media (max-width: 576px) {
@@ -281,11 +284,11 @@ html {
   }
   #garden .garden__container .garden__slider .garden__first .garden__content,
   #garden .garden__container .garden__slider .garden__third .garden__content {
-    top: 0;
+    top: 10%;
   }
-  #garden .garden__container .garden__slider .garden__first .garden__content img,
-  #garden .garden__container .garden__slider .garden__third .garden__content img {
-    height: 90px;
+  #garden .garden__container .garden__slider .garden__first .garden__content h1,
+  #garden .garden__container .garden__slider .garden__third .garden__content h1 {
+    margin-bottom: 20px;
   }
   #garden .garden__container .garden__slider .garden__second {
     width: 100%;
@@ -293,8 +296,8 @@ html {
   #garden .garden__container .garden__slider .garden__second .garden__content {
     top: 10%;
   }
-  #garden .garden__container .garden__slider .garden__second .garden__content img {
-    height: 90px;
+  #garden .garden__container .garden__slider .garden__second .garden__content h1 {
+    margin-bottom: 20px;
   }
   #garden .garden__container .garden__slider .garden__first {
     margin-bottom: -1rem;
@@ -315,7 +318,7 @@ html {
   }
   #garden .garden__container .garden__slider .garden__first .garden__content,
   #garden .garden__container .garden__slider .garden__third .garden__content {
-    top: -10%;
+    top: 10%;
   }
   #garden .garden__container .garden__slider .garden__first .garden__content img,
   #garden .garden__container .garden__slider .garden__third .garden__content img {
@@ -336,17 +339,10 @@ html {
   }
   #garden .garden__container .garden__slider .garden__first .garden__content,
   #garden .garden__container .garden__slider .garden__third .garden__content {
-    top: -5%;
-  }
-  #garden .garden__container .garden__slider .garden__first .garden__content img,
-  #garden .garden__container .garden__slider .garden__third .garden__content img {
-    height: 90px;
+    top: 5%;
   }
   #garden .garden__container .garden__slider .garden__second .garden__content {
     top: 10%;
-  }
-  #garden .garden__container .garden__slider .garden__second .garden__content img {
-    height: 90px;
   }
 }
 
@@ -361,9 +357,6 @@ html {
   }
   #garden .garden__container .garden__slider .garden__second .garden__content {
     top: 10%;
-  }
-  #garden .garden__container .garden__slider .garden__second .garden__content img {
-    height: 90px;
   }
 }
 /*# sourceMappingURL=main.min.css.map */
