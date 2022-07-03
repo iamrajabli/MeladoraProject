@@ -231,6 +231,9 @@ html {
 
 #garden .garden__container .garden__slider .garden__second {
   width: 40%;
+  -webkit-box-shadow: 0 0 7px 4px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 7px 4px rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 
 #garden .garden__container .garden__slider .garden__item {
