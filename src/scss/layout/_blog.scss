@@ -1,0 +1,42 @@
+#blog {
+    .blog__container {
+        margin: 0 auto;
+        display: flex;
+        gap: 20px;
+
+        .container {
+            padding: 0 !important;
+        }
+
+
+        
+        .blog__item {
+            width: 33.33%;
+            .blog__content {
+                padding: $padding;
+            }
+            h6 {
+                margin-top: $margin;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            p {
+                line-height: $line-height-lg;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-lg) {
+    .blog__container {
+        display: block !important;
+
+        .blog__item {
+            width: 100% !important;
+            margin-bottom: $margin-xl;
+        }
+    }
+}

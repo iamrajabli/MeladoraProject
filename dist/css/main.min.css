@@ -380,6 +380,10 @@ html {
   }
 }
 
+#products {
+  margin-bottom: 80px;
+}
+
 #products .burger__menu {
   display: none;
   font-size: 1.725rem;
@@ -451,6 +455,48 @@ html {
   }
   #products .container .products__content .products__item {
     width: 100%;
+  }
+}
+
+#blog .blog__container {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+#blog .blog__container .container {
+  padding: 0 !important;
+}
+
+#blog .blog__container .blog__item {
+  width: 33.33%;
+}
+
+#blog .blog__container .blog__item .blog__content {
+  padding: 1rem;
+}
+
+#blog .blog__container .blog__item h6 {
+  margin-top: 1rem;
+}
+
+#blog .blog__container .blog__item img {
+  width: 100%;
+}
+
+#blog .blog__container .blog__item p {
+  line-height: 1.25rem;
+}
+
+@media (max-width: 992px) {
+  .blog__container {
+    display: block !important;
+  }
+  .blog__container .blog__item {
+    width: 100% !important;
+    margin-bottom: 1.725rem;
   }
 }
 /*# sourceMappingURL=main.min.css.map */
