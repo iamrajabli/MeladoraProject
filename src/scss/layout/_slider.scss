@@ -1,165 +1,104 @@
 #slider {
 
-    margin-top: -100px;
+    margin-top: -140px;
 
     .slider__item {
-        height: 250px;
         background-color: $c-white;
         box-shadow: 0 0 9px 0 rgba(0, 0, 0, .3);
+        position: relative;
+        height: 250px;
+
 
         h1 {
             color: $c-dark-green;
-            font-size: $font-size-lg;
+            font-size: $font-size-xl;
+            margin-bottom: $margin;
         }
 
         span {
             color: $c-green;
         }
 
+        .slider__content {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
 
     }
 
     .ananas {
         background-image: url('/src/resources/img/ananas-bg.svg');
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
+
     }
 
     .vegetables {
         background-image: url('/src/resources/img/and-bg.svg');
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
 
     }
 
     .and {
         background-image: url('/src/resources/img/and-bg.svg');
         background-repeat: no-repeat;
-        background-size: contain;
-
+        background-size: cover;
     }
 }
 
 @media (max-width: $breakpoint-sm) {
     #slider {
-
-
-        .row {
-            display: block;
-
-        }
-
         .slider__item {
-            margin-bottom: 20px;
+            h1 {
+                margin-bottom: $margin-xs;
+            }
+
+            .slider__content {
+                top: 20px;
+            }
+
         }
 
         .ananas {
             img {
-                width: 200px;
                 height: 180px;
             }
         }
 
         .vegetables {
             img {
-                width: 200px;
+                width: 230px;
                 height: 180px;
             }
         }
 
         .and {
             img {
-                width: 280px;
+                height: 220px;
             }
         }
-
     }
-
-}
-
-@media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
-    #slider {
-
-        .row {
-            display: block;
-        }
-
-        .slider__item {
-            margin-bottom: 20px;
-
-            img {
-                right: 50px;
-            }
-
-            h1 {
-                font-size: $font-size-xxl;
-            }
-
-            span {
-                font-size: $font-size-xl;
-
-            }
-
-            .slider__content {
-                margin-left: 30px;
-            }
-        }
-
-    }
-
-}
-
-@media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
-    #slider {
-
-        .row {
-            display: block;
-        }
-
-        .slider__item {
-            margin-bottom: 20px;
-
-            img {
-                right: 50px;
-            }
-
-            h1 {
-                font-size: $font-size-xxl;
-            }
-
-            span {
-                font-size: $font-size-xl;
-
-            }
-
-            .slider__content {
-                margin-left: 30px;
-            }
-        }
-
-    }
-
 }
 
 @media (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {
-    #slider {
-        .ananas {
-            img {
-                width: 240px;
-                height: 200px;
-            }
+    .ananas {
+        img {
+            height: 180px;
         }
+    }
 
-        .vegetables {
-            img {
-                bottom: -20px;
-            }
+    .vegetables {
+        img {
+            width: 250px;
+            height: 180px;
         }
+    }
 
-        .and {
-            img {
-                width: 320px;
-            }
+    .and {
+        img {
+            height: 200px;
         }
     }
 }

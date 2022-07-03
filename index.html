@@ -5,22 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- INCLUDE CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="/dist/css/main.min.css">
-    <title>MELADORA</title>
+    <title>Document</title>
 </head>
 
 <body>
     <section id="header">
-        <div class="container">
-            <section id="header-top" class="padding-top-bottom-15 border-gray-bottom">
+        <section id="header-top">
+            <div class="container border-bottom pt-3 pb-3">
                 <div class="row">
-                    <div class="col-6 flex align-items-center">
+                    <div class="col-6 d-flex align-items-center px-0">
                         <img src="/src/resources/icon/tel.svg" alt="">
-                        <span>+994 (70) 5555777</span>
+                        <span class="text-white">+994 (70) 5555777</span>
                     </div>
-                    <div class="col-6 flex justify-content-end gap-15 align-items-center">
+                    <div class="col-6 d-flex gap-3 justify-content-end px-0 align-items-center">
                         <img src="/src/resources/icon/instagram.svg" alt="">
                         <img src="/src/resources/icon/linkedin.svg" alt="">
                         <img src="/src/resources/icon/fb.svg" alt="">
@@ -28,63 +28,104 @@
                         <img src="/src/resources/icon/youtube.svg" alt="">
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="navbar" class="padding-top-bottom-15">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-3">
-                            <img src="/src/resources/img/logo.svg" alt="">
+        <section id="navbar" class="pb-4 pt-4">
+            <div class="container position-relative">
+                <div class="row d-flex align-items-center">
+                    <div class="col-3">
+                        <img src="/src/resources/img/logo.svg" alt="">
+                    </div>
+                    <div class="col-9 d-flex  justify-content-end align-items-center px-0">
+                        <div class="burger__menu gap-20">
+                            <i class="fa-solid fa-magnifying-glass text-white mx-3"></i>
+                            <i class="fa-solid fa-bars text-white"></i>
                         </div>
-                        <div class="col-9 flex justify-content-end align-items-center ">
-                            <div class="burger__menu gap-20">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                                <i class="fa-solid fa-bars"></i>
-                            </div>
-                            <ul class="gap-15">
-                                <li><a href="#" class="reset-link">Biz kimik?</a></li>
-                                <li><a href="#" class="reset-link">Bağlarımız</a></li>
-                                <li><a href="#" class="reset-link">Məhsullarımız</a></li>
-                                <li><a href="#" class="reset-link">Xidmətlərimiz</a></li>
-                                <li><a href="#" class="reset-link">Sosial məsuliyyət</a></li>
-                                <li><a href="#" class="reset-link">Əlaqə</a></li>
-                                <li><i class="fa-solid fa-magnifying-glass"></i></li>
-                            </ul>
-                        </div>
+                        <ul class="gap-3">
+                            <li><a href="#" class="text-decoration-none text-white">Biz kimik?</a></li>
+                            <li><a href="#" class="text-decoration-none text-white">Bağlarımız</a></li>
+                            <li><a href="#" class="text-decoration-none text-white">Məhsullarımız</a></li>
+                            <li><a href="#" class="text-decoration-none text-white">Xidmətlərimiz</a></li>
+                            <li><a href="#" class="text-decoration-none text-white">Sosial məsuliyyət</a></li>
+                            <li><a href="#" class="text-decoration-none text-white">Əlaqə</a></li>
+                            <li><i class="fa-solid fa-magnifying-glass text-white"></i></li>
+                        </ul>
                     </div>
                 </div>
-            </section>          
-        </div>
+            </div>
+        </section>
     </section>
 
-    <section id="slider">
+    <!-- <section id="slider">
         <div class="container">
-            <div class="row justify-content-between gap-30">
-                <div class="col-4 col-md-12 col-sm-12 col-xs-12 slider__item ananas relative">
-                    <div class="slider__content absolute top-25 left-10">
-                        <h1 class="margin-bottom-20">Meyvələr</h1>
-                        <span>Daha çox...</span>
+            <div class="row g-3">
+                <div class="col-4 slider__item ananas">
+                    <div>
+                        <div class="slider__content">
+                            <h1 class="">Meyvələr</h1>
+                            <span>Daha çox...</span>
+                        </div>
+                        <img class="position-absolute bottom-0 end-0 " src="/src/resources/img/ananas.svg" alt="">
                     </div>
-                    <img class="absolute bottom-5 right-0" src="/src/resources/img/ananas.svg" alt="">
                 </div>
-                <div class="col-4 col-md-12 col-sm-12 col-xs-12 slider__item vegetables relative">
-                    <div class="slider__content absolute top-25 left-10">
-                        <h1 class="margin-bottom-20">Tərəvəzlər</h1>
-                        <span>Daha çox...</span>
+                <div class="col-4 slider__item  vegetables">
+                    <div>
+                        <div class="slider__content">
+                            <h1 class="">Tərəvəzlər</h1>
+                            <span>Daha çox...</span>
+                        </div>
+                        <img class="position-absolute bottom-0 end-0" src="/src/resources/img/vegetables.svg" alt="">
                     </div>
-                    <img class="absolute bottom-5 right-0" src="/src/resources/img/vegetables.svg" alt="">
                 </div>
-                <div class="col-4 col-md-12 col-sm-12 col-xs-12 slider__item and relative">
-                    <div class="slider__content absolute top-25 left-10">
-                        <h1 class="margin-bottom-20">Taxıl</h1>
-                        <span>Daha çox...</span>
+                <div class="col-4 slider__item and">
+                    <div>
+                        <div class="slider__content">
+                            <h1 class="">Taxıl</h1>
+                            <span>Daha çox...</span>
+                        </div>
+                        <img class="position-absolute bottom-0 end-0 " src="/src/resources/img/and.svg" alt="">
                     </div>
-                    <img class="absolute top-0 right-n-20" src="/src/resources/img/and.svg" alt="">
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
+
+   <section id="slider" class="mb-4">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+                <div class="slider__item ananas">
+                    <div class="slider__content">
+                        <h1 class="">Meyvələr</h1>
+                        <span>Daha çox...</span>
+                    </div>
+                    <img class="position-absolute bottom-0 end-0 " src="/src/resources/img/ananas.svg" alt="">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+                <div class="slider__item vegetables">
+                    <div class="slider__content">
+                        <h1 class="">Tərəvəzlər</h1>
+                            <span>Daha çox...</span>
+                    </div>
+                    <img class="position-absolute bottom-0 end-0 " src="/src/resources/img/vegetables.svg" alt="">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+                <div class="slider__item and">
+                    <div class="slider__content">
+                        <h1 class="">Taxıl</h1>
+                        <span>Daha çox...</span>
+                    </div>
+                    <img class="position-absolute bottom-0 end-0 " src="/src/resources/img/and.svg" alt="">
+                </div>
+            </div>
+
+        </div>
+    </div>
+   </section>
     <script src="/src/js/app.js"></script>
 </body>
 
