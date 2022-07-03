@@ -1,0 +1,34 @@
+#main {
+    background-color: #ebebeb;
+    margin-top: 150px;
+
+}
+
+@media (max-width: 400px) {
+    #main {
+        .line__first-img,
+        .line__second-img {
+            width: 100% !important;
+        }
+
+
+    }
+
+}
+
+@media (max-width: $breakpoint-xl) {
+    #main {
+        .main__img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .line__second-img {
+            width: 70%;
+        }
+
+
+    }
+
+}

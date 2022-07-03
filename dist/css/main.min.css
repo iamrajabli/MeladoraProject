@@ -184,4 +184,28 @@ html {
     height: 200px;
   }
 }
+
+#main {
+  background-color: #ebebeb;
+  margin-top: 150px;
+}
+
+@media (max-width: 400px) {
+  #main .line__first-img,
+  #main .line__second-img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  #main .main__img {
+    width: 100%;
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #main .line__second-img {
+    width: 70%;
+  }
+}
 /*# sourceMappingURL=main.min.css.map */
