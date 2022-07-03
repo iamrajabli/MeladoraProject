@@ -499,4 +499,13 @@ html {
     margin-bottom: 1.725rem;
   }
 }
+
+#footer {
+  background-image: url("/src/resources/img/footer.svg");
+  height: 675px;
+}
+
+#footer ul li {
+  margin-bottom: 1rem;
+}
 /*# sourceMappingURL=main.min.css.map */
