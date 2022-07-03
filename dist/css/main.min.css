@@ -50,6 +50,19 @@ table {
   border-spacing: 0;
 }
 
+.text-green {
+  color: #91B40D !important;
+}
+
+.mt-10 {
+  margin-top: 150px;
+}
+
+.rotate-180 {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
 html {
   font-size: 16px;
   font-family: "Montserrat";
@@ -209,6 +222,10 @@ html {
   }
 }
 
+#garden {
+  margin-bottom: 100px;
+}
+
 #garden .garden__container {
   width: 100%;
   margin-top: 70px;
@@ -360,6 +377,80 @@ html {
   }
   #garden .garden__container .garden__slider .garden__second .garden__content {
     top: 10%;
+  }
+}
+
+#products .burger__menu {
+  display: none;
+  font-size: 1.725rem;
+}
+
+#products ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#products .container .products__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#products .container .products__content .products__item {
+  width: 200px;
+  margin-bottom: 1.725rem;
+  padding: 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  -webkit-box-shadow: 5px 5px 6px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 5px 6px 5px rgba(0, 0, 0, 0.1);
+}
+
+#products .container .products__content .products__item .products__title h6 {
+  color: #91B40D;
+}
+
+#products .container .products__content .products__item img {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (max-width: 500px) {
+  #products {
+    position: relative;
+  }
+  #products .burger__menu {
+    display: block;
+  }
+  #products ul {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #91B40D;
+    padding: 1rem;
+    position: absolute;
+    left: 0;
+    top: 140px;
+    width: 100%;
+  }
+  #products ul a {
+    color: white !important;
+  }
+  #products ul li:last-child {
+    display: none;
+  }
+  #products .container .products__content .products__item {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=main.min.css.map */

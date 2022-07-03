@@ -361,3 +361,15 @@
 // .bottom-100per {
 //     bottom: 100%;
 // }
+
+.text-green {
+    color: $c-green !important;
+}
+
+.mt-10 {
+    margin-top: 150px;
+}
+
+.rotate-180 {
+    transform: rotate(90deg);
+}
