@@ -1,27 +1,57 @@
-const slider = () => {
+const slider = (sliderContainerSelector, sliderAreaSelector, prevSelector, nextSelector, sliderItemSelector, sliderWrapperSelector) => {
 
-    const sliderContainer = document.querySelector('#slider .slider__container'),
-        sliderArea = document.querySelector('#slider .slider__area'),
-        prev = document.querySelector('#slider .slider__control .fa-chevron-left'),
-        next = document.querySelector('#slider .slider__control .fa-chevron-right'),
-        sliderItem = document.querySelectorAll('#slider .slider__item'),
-        widthContainer = window.getComputedStyle(sliderContainer).width,
+    const sliderContainer = document.querySelector(sliderContainerSelector),
+        sliderArea = document.querySelector(sliderAreaSelector),
+        prev = document.querySelector(prevSelector),
+        next = document.querySelector(nextSelector),
+        sliderItem = document.querySelectorAll(sliderItemSelector),
+        sliderWrapper = document.querySelectorAll(sliderWrapperSelector);
+
+
+    let widthContainer = window.getComputedStyle(sliderContainer).width,
         heightContainer = window.getComputedStyle(sliderItem[0]).height,
+        marginItem = window.getComputedStyle(sliderItem[0]).marginBottom,
+        margin = +marginItem.slice(0, marginItem.length - 2),
         width = +widthContainer.slice(0, widthContainer.length - 2),
-        height = +heightContainer.slice(0, heightContainer.length - 2) * 3;
+        height = (+heightContainer.slice(0, heightContainer.length - 2) + margin) * 3,
+        position = null,
+        offset = 0,
+        totalWidth = width * (sliderWrapper.length),
+        totalHeight = height * (sliderWrapper.length);
 
-    let position = null;
-    let offset = 0;
-    let totalWidth = width * (sliderItem.length / 3);
-    let totalHeight = height * (sliderItem.length / 3);
 
     if (window.innerWidth > 1170) {
+        positionTrue();
+    }
+
+    if (window.innerWidth < 1170) {
+        positionFalse();
+    }
+
+    function sizes() {
+        widthContainer = window.getComputedStyle(sliderContainer).width;
+        heightContainer = window.getComputedStyle(sliderItem[0]).height;
+        marginItem = window.getComputedStyle(sliderItem[0]).marginBottom;
+        margin = +marginItem.slice(0, marginItem.length - 2);
+        width = +widthContainer.slice(0, widthContainer.length - 2);
+        height = (+heightContainer.slice(0, heightContainer.length - 2) + margin) * 3;
+        position = null;
+        offset = 0;
+        sliderArea.style.transform = `translate(${offset}px)`;
+        totalWidth = width * (sliderWrapper.length);
+        totalHeight = height * (sliderWrapper.length);
+
+    }
+
+    function positionTrue() {
+        sizes()
         sliderArea.style.width = totalWidth + 'px';
         sliderArea.style.height = heightContainer;
         position = true;
     }
 
-    if (window.innerWidth < 1170) {
+    function positionFalse() {
+        sizes()
         sliderArea.style.width = widthContainer;
         sliderArea.style.height = totalHeight + 'px';
         position = false;
@@ -29,18 +59,13 @@ const slider = () => {
 
     window.addEventListener("resize", function () {
         if (window.innerWidth > 1170) {
-            sliderArea.style.width = totalWidth + 'px';
-            sliderArea.style.height = heightContainer;
-            position = true;
+            positionTrue();
         }
 
         if (window.innerWidth < 1170) {
-            sliderArea.style.width = widthContainer;
-            sliderArea.style.height = totalHeight + 'px';
-            position = false;
+            positionFalse();
         }
     });
-
 
 
     prev.addEventListener('click', () => {
