@@ -149,19 +149,19 @@ html {
 }
 
 #slider .ananas {
-  background-image: url("/src/resources/img/ananas-bg.svg");
+  background-image: url("/src/resources/img/ananas-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 #slider .vegetables {
-  background-image: url("/src/resources/img/and-bg.svg");
+  background-image: url("/src/resources/img/and-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 #slider .and {
-  background-image: url("/src/resources/img/and-bg.svg");
+  background-image: url("/src/resources/img/and-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
 }

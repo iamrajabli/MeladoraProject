@@ -1,24 +1,8 @@
-const burgerNavbar = document.querySelector('#navbar .burger__menu .fa-bars'),
-    menuNavbar = document.querySelector('#navbar ul'),
-    burgerProducts = document.querySelector('#products .burger__menu .fa-bars'),
-    menuProducts = document.querySelector('#products ul'),
-    productsContent = document.querySelector('#products .products__content');
+import barMenu from './modules/barMenu.js';
+import tabs from './modules/tabs.js';
 
+window.addEventListener('DOMContentLoaded', () => {
+    barMenu('#navbar .burger__menu .fa-bars', '#navbar ul', '#products .burger__menu .fa-bars', '#products ul', '#products .products__content');
 
-function burger(selector, menu) {
-    selector.addEventListener('click', () => {
-        menu.classList.toggle('d-flex');
-        selector.style.transition = 'all 200ms linear';
-        selector.classList.toggle('rotate-180');
-    });
-}
-
-function marginTop(selector, menu) {
-    selector.addEventListener('click', () => {
-        menu.classList.toggle('mt-10');
-    });
-}
-
-burger(burgerNavbar, menuNavbar)
-burger(burgerProducts, menuProducts)
-marginTop(burgerProducts, productsContent)
+    tabs('#products ul li a', '#products .products__content');
+});
