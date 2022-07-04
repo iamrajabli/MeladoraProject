@@ -121,80 +121,243 @@ html {
 }
 
 #slider {
-  margin-top: -140px;
+  margin-top: -125px;
 }
 
-#slider .slider__item {
-  background-color: #FDFDFD;
-  -webkit-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
-          box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+#slider .slider__container {
+  max-width: 1140px;
+  margin: 0 auto;
   position: relative;
-  height: 250px;
+  padding-left: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-height: 750px;
+  overflow: hidden;
 }
 
-#slider .slider__item h1 {
-  color: #1A5221;
+#slider .slider__area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#slider .slider__area .slider__item {
+  width: 380px;
+  height: 250px;
+  position: relative;
+  background-color: #FDFDFD;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#slider .slider__area .slider__item .slider__content {
+  margin: 30px 0 0 40px;
+}
+
+#slider .slider__area .slider__item .slider__content h1 {
   font-size: 1.725rem;
+  color: #1A5221;
   margin-bottom: 1rem;
 }
 
-#slider .slider__item span {
-  color: #91B40D;
+#slider .slider__area .slider__item .slider__content a {
+  text-decoration: none;
+  color: #000000;
 }
 
-#slider .slider__item .slider__content {
+#slider .slider__area .slider__item img {
   position: absolute;
-  top: 30px;
-  left: 30px;
 }
 
-#slider .ananas {
+#slider .slider__area .and {
+  background-image: url("/src/resources/img/and-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#slider .slider__area .and img {
+  right: -20px;
+  bottom: -20px;
+}
+
+#slider .slider__area .ananas {
   background-image: url("/src/resources/img/ananas-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-#slider .vegetables {
+#slider .slider__area .ananas img {
+  right: -30px;
+  bottom: 0;
+}
+
+#slider .slider__area .vegetables {
   background-image: url("/src/resources/img/and-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-#slider .and {
-  background-image: url("/src/resources/img/and-bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+#slider .slider__area .vegetables img {
+  right: 0;
+  bottom: -10px;
+}
+
+#slider .slider__control {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#slider .slider__control i {
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #91B40D;
+  -webkit-box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 @media (max-width: 576px) {
-  #slider .slider__item h1 {
-    margin-bottom: 0.25rem;
+  #slider .slider__container {
+    width: 100%;
   }
-  #slider .slider__item .slider__content {
-    top: 20px;
+  #slider .slider__area {
+    display: block;
   }
-  #slider .ananas img {
-    height: 180px;
+  #slider .slider__area .slider__item {
+    width: 100%;
   }
-  #slider .vegetables img {
-    width: 230px;
-    height: 180px;
+  #slider .slider__area .and img {
+    height: 200px;
+    right: 0;
   }
-  #slider .and img {
-    height: 220px;
+  #slider .slider__area .ananas img {
+    height: 200px;
+  }
+  #slider .slider__area .vegetables img {
+    height: 150px;
   }
 }
 
-@media (min-width: 992px) and (max-width: 1200px) {
-  .ananas img {
-    height: 180px;
+@media (min-width: 576px) and (max-width: 768px) {
+  #slider .slider__container {
+    width: 576px;
   }
-  .vegetables img {
-    width: 250px;
-    height: 180px;
+  #slider .slider__area {
+    display: block;
   }
-  .and img {
-    height: 200px;
+  #slider .slider__area .slider__item {
+    width: 100%;
+  }
+  #slider .slider__area .slider__item .slider__content {
+    margin: 50px 0 0 60px;
+  }
+  #slider .slider__area .slider__item .slider__content h1 {
+    font-size: 2.5rem;
+  }
+  #slider .slider__area .slider__item .slider__content a {
+    font-size: 1.725rem;
+  }
+  #slider .slider__area .and img {
+    height: 300px;
+    right: 80px;
+    bottom: -20px;
+  }
+  #slider .slider__area .ananas img {
+    right: 90px;
+  }
+  #slider .slider__area .vegetables img {
+    right: 90px;
+    bottom: 10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  #slider .slider__container {
+    width: 768px;
+  }
+  #slider .slider__area {
+    display: block;
+  }
+  #slider .slider__area .slider__item {
+    width: 100%;
+  }
+  #slider .slider__area .slider__item .slider__content {
+    margin: 50px 0 0 60px;
+  }
+  #slider .slider__area .slider__item .slider__content h1 {
+    font-size: 2.5rem;
+  }
+  #slider .slider__area .slider__item .slider__content a {
+    font-size: 1.725rem;
+  }
+  #slider .slider__area .and img {
+    height: 300px;
+    right: 80px;
+    bottom: -20px;
+  }
+  #slider .slider__area .ananas img {
+    right: 90px;
+  }
+  #slider .slider__area .vegetables img {
+    right: 90px;
+    bottom: 10px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1170px) {
+  #slider .slider__container {
+    width: 900px;
+  }
+  #slider .slider__area {
+    display: block;
+  }
+  #slider .slider__area .slider__item {
+    width: 100%;
+  }
+  #slider .slider__area .slider__item .slider__content {
+    margin: 50px 0 0 60px;
+  }
+  #slider .slider__area .slider__item .slider__content h1 {
+    font-size: 2.5rem;
+  }
+  #slider .slider__area .slider__item .slider__content a {
+    font-size: 1.725rem;
+  }
+  #slider .slider__area .and img {
+    height: 300px;
+    right: 80px;
+    bottom: -20px;
+  }
+  #slider .slider__area .ananas img {
+    right: 90px;
+  }
+  #slider .slider__area .vegetables img {
+    right: 90px;
+    bottom: 10px;
   }
 }
 

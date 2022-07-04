@@ -1,104 +1,306 @@
 #slider {
+    margin-top: -125px;
 
-    margin-top: -140px;
-
-    .slider__item {
-        background-color: $c-white;
-        box-shadow: 0 0 9px 0 rgba(0, 0, 0, .3);
+    .slider__container {
+        max-width: 1140px;
+        margin: 0 auto;
         position: relative;
-        height: 250px;
-
-
-        h1 {
-            color: $c-dark-green;
-            font-size: $font-size-xl;
-            margin-bottom: $margin;
-        }
-
-        span {
-            color: $c-green;
-        }
-
-        .slider__content {
-            position: absolute;
-            top: 30px;
-            left: 30px;
-        }
-
+        padding-left: 10px;
+        box-sizing: border-box;
+        max-height: 750px;
+        overflow: hidden;
     }
 
-    .ananas {
-        background-image: url('/src/resources/img/ananas-bg.png');
-        background-repeat: no-repeat;
-        background-size: cover;
+    .slider__area {
+        display: flex;
+        transition: $transition-200ms;
+        justify-content: space-between;
 
-    }
-
-    .vegetables {
-        background-image: url('/src/resources/img/and-bg.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-
-    }
-
-    .and {
-        background-image: url('/src/resources/img/and-bg.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-}
-
-@media (max-width: $breakpoint-sm) {
-    #slider {
         .slider__item {
-            h1 {
-                margin-bottom: $margin-xs;
-            }
+            width: 380px;
+            height: 250px;
+            position: relative;
+            background-color: $c-white;
+            box-sizing: border-box;
+            border: 1px solid rgba(0, 0, 0, .2);
 
             .slider__content {
-                top: 20px;
+                margin: 30px 0 0 40px;
+
+                h1 {
+                    font-size: $font-size-xl;
+                    color: $c-dark-green;
+                    margin-bottom: $margin;
+
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $c-dark;
+                }
             }
 
-        }
-
-        .ananas {
             img {
-                height: 180px;
-            }
-        }
-
-        .vegetables {
-            img {
-                width: 230px;
-                height: 180px;
+                position: absolute;
             }
         }
 
         .and {
+
+            background-image: url('/src/resources/img/and-bg.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+
+
             img {
-                height: 220px;
+                right: -20px;
+                bottom: -20px;
             }
+        }
+
+        .ananas {
+            background-image: url('/src/resources/img/ananas-bg.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            img {
+                right: -30px;
+                bottom: 0;
+            }
+        }
+
+        .vegetables {
+            background-image: url('/src/resources/img/and-bg.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+
+
+
+            img {
+                right: 0;
+                bottom: -10px;
+            }
+        }
+    }
+
+    .slider__control {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        i {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $c-green;
+            box-shadow: 0 8px 12px 0 rgba(0, 0, 0, .2);
+            cursor: pointer;
         }
     }
 }
 
-@media (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {
-    .ananas {
-        img {
-            height: 180px;
-        }
-    }
+@media (max-width: 576px) {
+    #slider {
 
-    .vegetables {
-        img {
-            width: 250px;
-            height: 180px;
+        .slider__container {
+            width: 100%;
         }
-    }
 
-    .and {
-        img {
-            height: 200px;
+        .slider__area {
+            display: block;
+
+            .slider__item {
+                width: 100%;
+
+
+
+            }
+
+            .and {
+                img {
+                    height: 200px;
+                    right: 0;
+                }
+            }
+
+            .ananas {
+                img {
+                    height: 200px;
+
+                }
+            }
+
+            .vegetables {
+
+                img {
+                    height: 150px;
+                }
+            }
         }
+
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    #slider {
+
+        .slider__container {
+            width: 576px;
+        }
+
+        .slider__area {
+            display: block;
+
+            .slider__item {
+                width: 100%;
+
+                .slider__content {
+                    margin: 50px 0 0 60px;
+
+                    h1 {
+                        font-size: $font-size-xxl;
+                    }
+
+                    a {
+                        font-size: $font-size-xl;
+                    }
+                }
+
+            }
+
+            .and {
+                img {
+                    height: 300px;
+                    right: 80px;
+                    bottom: -20px;
+                }
+            }
+
+            .ananas {
+                img {
+                    right: 90px;
+                }
+            }
+
+            .vegetables {
+
+                img {
+                    right: 90px;
+                    bottom: 10px;
+                }
+            }
+        }
+        
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    #slider {
+
+        .slider__container {
+            width: 768px;
+        }
+
+        .slider__area {
+            display: block;
+
+            .slider__item {
+                width: 100%;
+
+                .slider__content {
+                    margin: 50px 0 0 60px;
+
+                    h1 {
+                        font-size: $font-size-xxl;
+                    }
+
+                    a {
+                        font-size: $font-size-xl;
+                    }
+                }
+
+            }
+
+            .and {
+                img {
+                    height: 300px;
+                    right: 80px;
+                    bottom: -20px;
+                }
+            }
+
+            .ananas {
+                img {
+                    right: 90px;
+                }
+            }
+
+            .vegetables {
+
+                img {
+                    right: 90px;
+                    bottom: 10px;
+                }
+            }
+        }
+
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1170px) {
+    #slider {
+
+        .slider__container {
+            width: 900px;
+        }
+
+        .slider__area {
+            display: block;
+
+            .slider__item {
+                width: 100%;
+
+                .slider__content {
+                    margin: 50px 0 0 60px;
+
+                    h1 {
+                        font-size: $font-size-xxl;
+                    }
+
+                    a {
+                        font-size: $font-size-xl;
+                    }
+                }
+
+            }
+
+            .and {
+                img {
+                    height: 300px;
+                    right: 80px;
+                    bottom: -20px;
+                }
+            }
+
+            .ananas {
+                img {
+                    right: 90px;
+                }
+            }
+
+            .vegetables {
+
+                img {
+                    right: 90px;
+                    bottom: 10px;
+                }
+            }
+        }
+
     }
 }
