@@ -1,15 +1,6 @@
 @import 'base/reset';
 @import 'vendors/fonts';
+@import 'vendors/bootstrap';
 @import 'scss-utils/variables';
 @import 'components/components';
-@import 'layout/layout';
-@import 'layout/media';
-@import 'layout/header';
-@import 'layout/header-top';
-@import 'layout/navbar';
-@import 'layout/slider';
-@import 'layout/main';
-@import 'layout/garden';
-@import 'layout/products';
-@import 'layout/blog';
-@import 'layout/footer';
+@import 'layout/layouts';

@@ -1,0 +1,26 @@
+#xidmetlerimiz {
+    .xidmetlerimiz__container {
+        width: 1140px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        margin-top: $margin-xxl;
+
+        .xidmetlerimiz__item {
+            width: calc(100% / 3);
+            display: flex;
+            flex-direction: column;
+            gap: $gap-lg;
+
+            img {
+                width: 123px;
+                height: 83px;
+            }
+
+            h3 {
+                font-weight: $font-weight-500;
+                color: $c-dark-green;
+            }
+        }
+    }
+}
