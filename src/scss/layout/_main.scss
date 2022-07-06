@@ -1,34 +1,55 @@
 #main {
-    background-color: #ebebeb;
-    margin: 150px 0;
+    margin-top: 100px;
+    background-color: rgb(238, 238, 238);
 
-}
-
-@media (max-width: 400px) {
-    #main {
-        .line__first-img,
-        .line__second-img {
-            width: 100% !important;
-        }
-
-
-    }
-
-}
-
-@media (max-width: $breakpoint-xl) {
-    #main {
-        .main__img {
-            width: 100%;
-            height: 400px;
+    .main__banner {
+        img {
+            height: 800px;
             object-fit: cover;
         }
-
-        .line__second-img {
-            width: 70%;
-        }
-
-
     }
 
+    .main__container {
+        line-height: 30px;
+        font-size: 15px;
+    }
+
+    
+    .main__item {
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+
+@media (max-width: 576px) {
+    .main__line {
+        width: 70%;
+    }
+
+    .main__container {
+        gap: 30px !important;
+
+        img {
+            width: 60%;
+        }
+
+        p {
+            font-size: 12px !important;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+    .main__line {
+        width: 70%;
+    }
+
+    .main__container {
+        img {
+            width: 70%;
+        }
+    }
 }

@@ -1,15 +1,20 @@
-@import 'layout';
-@import 'media';
+body {
+    font-family: 'Poppins';
+}
+
 @import 'header';
-@import 'header-top';
 @import 'navbar';
 @import 'slider';
 @import 'main';
 @import 'garden';
 @import 'products';
+@import 'product';
 @import 'blog';
-@import 'footer';
 @import 'banner';
 @import 'bizkimik';
 @import 'xidmetlerimiz';
 @import 'galereya';
+@import 'baglarimiz';
+@import 'elaqe';
+@import 'sosial';
+@import 'footer';

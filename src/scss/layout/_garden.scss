@@ -1,236 +1,26 @@
 #garden {
-    margin-bottom: 100px;
+    margin-top: 100px;
+
+    .garden__item {
+        width: 90%;
+
+        p {
+            line-height: 20px;
+            color: #7C7A7A;
+        }
+
+        .garden__icon {
+            width: 100px;
+            height: 50px;
+        }
+
+    }
+}
+
+@media (max-width: 968px) {
+    .garden__icon {
+        width: 50%;
     
-    .garden__container {
-        width: 100%;
-        margin-top: 70px;
-
-        .garden__slider {
-            display: flex;
-            width: 100%;
-
-            .garden__first,
-            .garden__third {
-                width: 30%;
-                align-self: center;
-            }
-
-            .garden__second {
-                width: 40%;
-                box-shadow: 0 0 7px 4px rgba(0, 0, 0, .4);
-                z-index: 1;
-            }
-
-            .garden__item {
-                position: relative;
-                text-align: center;
-
-              
-
-                img {
-                    width: 100%;
-                    object-fit: cover;
-                }
-
-                .garden__content {
-                    position: absolute;
-                    top: 25%;
-                    color: $c-white;
-
-                    p {
-                        width: 70%;
-                        margin: 0 auto;
-                        line-height: $line-height-lg;
-                    }
-
-                    h1 {
-                        color: rgba(0, 0, 0, .6);
-                        margin-bottom: 20px;
-
-                        font: {
-                            weight: $font-weight-700;
-                            size: 50px
-                        }
-                    }
-                }
-            }
-        }
     }
 
-}
-
-@media (max-width: $breakpoint-sm) {
-    #garden {
-        .garden__container {
-
-            .garden__slider {
-                display: flex;
-                flex-direction: column;
-                width: 100%;
-
-                .garden__first,
-                .garden__third {
-                    width: 100%;
-
-                    img {
-                        height: 250px;
-                    }
-
-                    .garden__content {
-                        h1 {
-                            margin-bottom: 20px;
-                        }
-
-                        top:10%;
-                    }
-                }
-
-                .garden__second {
-                    width: 100%;
-
-                    .garden__content {
-                        h1 {
-                            margin-bottom: 20px;
-                        }
-
-                        top:10%;
-                    }
-                }
-
-
-
-                .garden__first {
-                    margin-bottom: -$margin;
-                }
-
-                .garden__third {
-                    margin-top: -$margin;
-
-                }
-
-            }
-
-        }
-
-    }
-}
-
-@media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
-    #garden {
-        .garden__container {
-            .garden__slider {
-                .garden__item {
-                    .garden__content {
-
-                        h3 {
-                            font-size: $font-size;
-                        }
-
-                        p {
-                            width: 90%;
-                            line-height: $line-height-md;
-                            font-size: $font-size-md;
-                        }
-                    }
-                }
-
-                .garden__first,
-                .garden__third {
-
-
-
-                    .garden__content {
-                        img {
-                            height: 90px;
-                        }
-
-                        top:10%;
-
-                    }
-                }
-
-                .garden__second {
-
-                    .garden__content {
-                        img {
-                            height: 90px;
-                        }
-
-                        top:10%;
-                    }
-                }
-
-            }
-
-        }
-
-    }
-}
-
-@media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
-    #garden {
-        .garden__container {
-            .garden__slider {
-                .garden__item {
-                    .garden__content {
-                        p {
-                            line-height: $line-height-lg;
-                            width: 100%;
-                        }
-                    }
-                }
-
-                .garden__first,
-                .garden__third {
-                    .garden__content {
-                        top:5%;
-                    }
-                }
-
-                .garden__second {
-
-                    .garden__content {
-                      
-
-                        top:10%;
-                    }
-                }
-
-            }
-
-        }
-
-    }
-}
-
-@media (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {
-    #garden {
-        .garden__container {
-            .garden__slider {
-
-                .garden__first,
-                .garden__third {
-                    .garden__content {
-                        img {
-                            height: 90px;
-                        }
-
-                        top:10%;
-
-                    }
-                }
-
-                .garden__second {
-
-                    .garden__content {
-
-                        top:10%;
-                    }
-                }
-
-            }
-
-        }
-
-    }
 }

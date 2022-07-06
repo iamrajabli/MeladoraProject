@@ -1,26 +1,22 @@
 #xidmetlerimiz {
-    .xidmetlerimiz__container {
-        width: 1140px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        margin-top: $margin-xxl;
+    margin: 100px 0;
+}
 
-        .xidmetlerimiz__item {
-            width: calc(100% / 3);
-            display: flex;
-            flex-direction: column;
-            gap: $gap-lg;
+@media (max-width: 992px) {
+    #xidmetlerimiz {
+        .xidmetlerimiz__wrapper {
+            margin-bottom: 30px;
 
-            img {
-                width: 123px;
-                height: 83px;
+            .xidmetlerimiz__item {
+                text-align: center;
+
+                p {
+                    margin: 0 auto;
+                    width: 75%;
+                }
             }
 
-            h3 {
-                font-weight: $font-weight-500;
-                color: $c-dark-green;
-            }
+
         }
     }
 }

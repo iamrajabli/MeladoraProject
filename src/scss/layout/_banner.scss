@@ -1,6 +1,12 @@
 #banner {
-    img:nth-child(2) {
+    background-image: url('/src/resources/img/banner2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+
+    img {
         bottom: -25%;
         right: 10%;
     }
+
 }

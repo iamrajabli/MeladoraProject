@@ -1,8 +1,16 @@
-
-#header {
-    background-image: url('/src/resources/img/banner.png');
+header {
+    height: 630px;
+    background-image: url('/src/resources/img/header.png');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 630px;
+
+   
 }
 
+@media (max-width: 576px) {
+    #header-top {
+     span {
+         font-size: 10px;
+     }
+    }
+ }

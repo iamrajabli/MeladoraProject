@@ -1,7 +1,6 @@
-#navbar {
+nav {
     .burger__menu {
         display: none;
-        font-size: $font-size-xl;
     }
 
     ul {
@@ -9,28 +8,30 @@
     }
 }
 
+.other__title {
+    margin-bottom: 60px;
+    margin-left: 60px;
+}
 
 
-@media (max-width: $breakpoint-lg) {
-    #navbar {
-        ul {
-            display: none;
-            flex-direction: column;
-            background-color: $c-green;
-            padding: $padding;
-            position: absolute;
-            left: 0;
-            top: 70px;
-            width: 100%;
 
-            li:last-child {
-                display: none;
-            }
-        }
-
+@media (max-width: 768px) {
+    nav {
         .burger__menu {
             display: flex;
         }
-    }
 
+        ul {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    nav {
+        ul {
+            font-size: 12px;
+            gap: 7px !important;
+        }
+    }
 }
