@@ -13,19 +13,19 @@ nav {
 
     ul {
         display: flex;
-      
+
     }
 
     .search {
         display: none;
         position: absolute;
-        top:102%;
+        top: 102%;
         z-index: 1000;
         right: 10px;
     }
 
     .c-white {
-        color:$c-white;
+        color: $c-white;
     }
 }
 
@@ -52,6 +52,13 @@ nav {
 }
 
 
+@media (max-width: 576px) {
+    nav {
+        .burger__menu {
+            margin-right: 10px;
+        }
+    }
+}
 
 @media (max-width: 768px) {
     nav {
@@ -66,7 +73,7 @@ nav {
 
             li {
                 a {
-                    color: $c-black !important;
+                    color: $c-black  !important;
                 }
             }
         }
