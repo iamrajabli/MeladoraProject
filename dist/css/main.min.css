@@ -60,6 +60,12 @@ table {
   margin-top: 20px;
 }
 
+@media (max-width: 992px) {
+  .title img {
+    width: 200px;
+  }
+}
+
 body {
   font-family: 'Poppins';
 }
@@ -77,8 +83,16 @@ header {
   }
 }
 
+nav .container {
+  position: relative;
+}
+
 nav .burger__menu {
   display: none;
+}
+
+nav i {
+  cursor: pointer;
 }
 
 nav ul {
@@ -87,9 +101,45 @@ nav ul {
   display: flex;
 }
 
+nav .search {
+  display: none;
+  position: absolute;
+  top: 102%;
+  z-index: 1000;
+  right: 10px;
+}
+
+nav .c-white {
+  color: #FDFDFD;
+}
+
 .other__title {
   margin-bottom: 60px;
   margin-left: 60px;
+}
+
+.rotate-90 {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.navbg {
+  background-image: url("/src/resources/icon/menubg.svg");
+  width: 150px;
+  height: 52px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbg a {
+  color: #FDFDFD !important;
 }
 
 @media (max-width: 768px) {
@@ -100,6 +150,35 @@ nav ul {
   }
   nav ul {
     display: none;
+    z-index: 1111;
+    position: absolute;
+    top: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    background-color: #FDFDFD;
+  }
+  nav ul li:last-child {
+    display: none;
+  }
+  nav ul li a {
+    color: #313131 !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbg {
+    height: 42px;
+    width: 120px;
+    border-radius: 5px;
+  }
+  nav ul {
+    font-size: 10px !important;
   }
 }
 
@@ -114,30 +193,55 @@ nav ul {
   margin-top: -125px;
 }
 
-#slider .slider__wrapper {
-  height: 250px;
-}
-
 #slider .slider__item {
-  background-color: #1A5221;
-  width: 95%;
-  height: 100%;
+  height: 250px;
+  cursor: pointer;
 }
 
-@media (max-width: 576px) {
-  #slider img {
-    width: 150px;
-  }
+#slider .ananas {
+  background-color: #1A5221;
+}
+
+#slider .ananas img {
+  bottom: 10px;
+  right: 10px;
+}
+
+#slider .vegetables {
+  background-color: #91B40D;
+}
+
+#slider .vegetables img {
+  bottom: -20px;
+  right: 0;
+}
+
+#slider .and {
+  background-color: #FFBF00;
+}
+
+#slider .and img {
+  bottom: -20px;
+  right: -50px;
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
   #slider .vegetables {
-    width: 250px;
+    height: 200px;
+  }
+  #slider .vegetables img {
+    width: 220px;
   }
   #slider .and {
+    height: 200px;
+  }
+  #slider .and img {
     width: 320px;
   }
   #slider .ananas {
+    height: 200px;
+  }
+  #slider .ananas img {
     width: 160px;
     height: 190px;
     right: -1px !important;
@@ -190,6 +294,12 @@ nav ul {
   }
 }
 
+@media (max-width: 992px) {
+  .main__banner img {
+    height: 500px !important;
+  }
+}
+
 #garden {
   margin-top: 100px;
 }
@@ -208,9 +318,21 @@ nav ul {
   height: 50px;
 }
 
-@media (max-width: 968px) {
+@media (max-width: 992px) {
   .garden__icon {
     width: 50%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .garden__img {
+    height: 400px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .garden__img {
+    height: 300px !important;
   }
 }
 
@@ -313,8 +435,34 @@ nav ul {
   right: 10%;
 }
 
+@media (max-width: 992px) {
+  #banner {
+    height: 300px;
+  }
+  #banner img {
+    width: 200px;
+    height: 150px;
+  }
+}
+
 #bizkimik {
   margin-top: 100px;
+}
+
+@media (max-width: 992px) {
+  #bizkimik .main__item.vegetables {
+    margin-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #bizkimik .main__item.vegetables img {
+    width: 400px;
+    height: 200px;
+  }
 }
 
 #xidmetlerimiz {
@@ -341,12 +489,17 @@ nav ul {
 #galereya .container:nth-child(2) {
   margin: 2.5rem auto 0 auto;
   position: relative;
+  overflow: hidden;
+}
+
+#galereya .container:nth-child(2) .galereya__wrapper {
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
 }
 
 #galereya .container:nth-child(2) .galereya__wrapper img {
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100%;
   height: 300px;
   display: block;
   margin: 0 auto;
@@ -354,42 +507,6 @@ nav ul {
 
 #galereya .container:nth-child(2) .galereya__wrapper img:first-child {
   margin-bottom: 1rem;
-}
-
-#galereya .container:nth-child(2) .galereya__control {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-#galereya .container:nth-child(2) .galereya__control i {
-  font-size: 100px;
-  padding: 0 1.25rem;
-  height: 600px;
-  width: 150px;
-  color: #313131;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  cursor: pointer;
-  -webkit-transition: all 200ms linear;
-  transition: all 200ms linear;
-}
-
-#galereya .container:nth-child(2) .galereya__control i:hover {
-  background-color: rgba(0, 128, 0, 0.4);
 }
 
 #galereya .galereya__dot {
@@ -423,6 +540,13 @@ nav ul {
   background-color: #91b40d;
   -webkit-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 576px) {
+  .galereya__item img {
+    width: 200px !important;
+    height: 200px !important;
+  }
 }
 
 #baglarimiz {
@@ -490,13 +614,13 @@ footer .footer__container {
 }
 
 @media (max-width: 576px) {
-  #footer img {
-    width: 230px;
+  footer img {
+    width: 200px !important;
   }
-  #footer ul {
+  footer ul {
     gap: 10px !important;
   }
-  #footer li {
+  footer li {
     font-size: 14px;
   }
 }

@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/dist/css/main.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
     <title>Ana səhifə</title>
+
 </head>
 
 <body>
@@ -33,24 +36,33 @@
             <div class="container">
                 <div class="row pb-3 pt-3 align-items-center">
                     <div class="col-3">
-                        <a href="index.html"><img src="/src/resources/img/logo.svg" alt=""></a>
+                        <a class="getToIndex" href="index.html"><img src="/src/resources/img/logo.svg" alt=""></a>
                     </div>
                     <div class="col-9 d-flex justify-content-end align-items-center p-0">
                         <div class="burger__menu gap-20">
                             <i class="fa-solid fa-magnifying-glass text-white mx-3"></i>
                             <i class="fa-solid fa-bars text-white"></i>
                         </div>
-                        <ul class="gap-3">
-                            <li><a href="bizkimik.html" class="text-decoration-none text-white">Biz kimik?</a></li>
-                            <li><a href="baglarimiz.html" class="text-decoration-none text-white">Bağlarımız</a></li>
-                            <li><a href="mehsullarimiz.html" class="text-decoration-none text-white">Məhsullarımız</a>
+                        <ul class="gap-3 align-items-center">
+                            <li><a href="bizkimik.html" class="text-decoration-none c-white">Biz kimik?</a></li>
+                            <li><a href="bizkimik.html" class="text-decoration-none c-white">Bağlarımız</a></li>
+                            <li><a href="mehsullarimiz.html" class="text-decoration-none c-white">Məhsullarımız</a>
                             </li>
-                            <li><a href="xidmetlerimiz.html" class="text-decoration-none text-white">Xidmətlərimiz</a>
+                            <li><a href="xidmetlerimiz.html" class="text-decoration-none c-white">Xidmətlərimiz</a>
                             </li>
-                            <li><a href="sosial.html" class="text-decoration-none text-white">Sosial məsuliyyət</a></li>
-                            <li><a href="elaqe.html" class="text-decoration-none text-white">Əlaqə</a></li>
+                            <li><a href="sosial.html" class="text-decoration-none c-white">Sosial məsuliyyət</a></li>
+                            <li><a href="elaqe.html" class="text-decoration-none c-white">Əlaqə</a></li>
                             <li><i class="fa-solid fa-magnifying-glass text-white"></i></li>
                         </ul>
+                    </div>
+                </div>
+
+                <div class="search row">
+                    <div class="col-12 d-flex justify-content-end p-0">
+                        <div class="search__area">
+                            <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Search"
+                                aria-label="Search" />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -59,38 +71,32 @@
 
     <section id="slider">
         <div class="container">
-            <div class="row d-xl-flex flex-nowrap">
-                <div class="slider__wrapper col-lg-4 col-12 d-flex justify-content-center">
-                    <div class="slider__item position-relative" style="background-color: #1A5221;">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slider__item position-relative ananas">
                         <div class="slider__content mt-5 ms-4">
                             <h3 class="h3 text-white">Meyvələr</h3>
                             <a href="#" class="text-white text-decoration-none">Daha çox...</a>
                         </div>
-                        <img class="position-absolute ananas" style="bottom: 10px; right: 10px;"
-                            src="/src/resources/img/ananas.png" alt="">
+                        <img class="position-absolute" src="/src/resources/img/ananas.png" alt="">
                     </div>
-                </div>
-                <div class="slider__wrapper col-lg-4 d-none d-lg-flex justify-content-center">
-                    <div class="slider__item position-relative" style="background-color: #91B40D;">
+                    <div class="swiper-slide slider__item position-relative vegetables">
                         <div class="slider__content mt-5 ms-4">
-                            <h3 class="h3 text-white">Meyvələr</h3>
+                            <h3 class="h3 text-white">Tərəvəzlər</h3>
                             <a href="#" class="text-white text-decoration-none">Daha çox...</a>
                         </div>
-                        <img class="position-absolute vegetables" style="bottom: -10px; right: 0;"
-                            src="/src/resources/img/vegetables.png" alt="">
+                        <img class="position-absolute" src="/src/resources/img/vegetables.png" alt="">
                     </div>
-                </div>
-                <div class="slider__wrapper col-lg-4 d-none d-lg-flex justify-content-center">
-                    <div class="slider__item position-relative" style="background-color: #FFBF00;">
+                    <div class="swiper-slide slider__item position-relative and">
                         <div class="slider__content mt-5 ms-4">
-                            <h3 class="h3 text-white">Meyvələr</h3>
+                            <h3 class="h3 text-white">Taxıllar</h3>
                             <a href="#" class="text-white text-decoration-none">Daha çox...</a>
                         </div>
-                        <img class="position-absolute and" style="bottom: -20px; right: -50px; "
-                            src="/src/resources/img/and.png" alt="">
+                        <img class="position-absolute" src="/src/resources/img/and.png" alt="">
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -158,38 +164,40 @@
             </div>
         </div>
         <div class="container">
-            <div class="row p-4 p-lg-0">
-                <div class="col-4 p-0 d-flex justify-content-left">
-                    <div class="garden__item d-flex flex-column gap-3">
+            <div class="row p-4 p-lg-0 gap-5 gap-md-0">
+                <div class="col-12 text-left-md col-md-4">
+                    <div class="garden__item d-flex flex-column gap-3 w-100">
                         <img class="garden__icon" src="/src/resources/icon/01.png" alt="">
                         <h3 class="h3 ">BAĞ</h3>
                         <p class="mb-3">Lorem Ipsum is simply dummy
                             text
                             of the printing and typesetting industry. Lorem Ipsum has been
                             the industry’s standard dummy text ever since the 1500s.</p>
-                        <img src="/src/resources/img/taxil.png" class="w-100" alt="">
+                        <img src="/src/resources/img/taxil.png" class="w-100 garden__img" alt="">
                     </div>
                 </div>
-                <div class="col-4 p-0 d-flex justify-content-center">
-                    <div class="garden__item d-flex flex-column gap-3">
-                        <img src="/src/resources/img/dag.png" class="w-100" alt="">
+                <div class="col-12 text-left-md col-md-4">
+                    <div class="garden__item d-flex flex-column flex-md-column-reverse gap-3  w-100">
+                        <img class="garden__icon" src="/src/resources/icon/02.png" alt="">
+
                         <h3 class="h3 mt-3 ">BAĞ</h3>
                         <p>Lorem Ipsum is simply dummy text of the printing and
                             typesetting
                             industry. Lorem Ipsum has been
                             the industry’s standard dummy text ever since the 1500s.</p>
-                        <img class="garden__icon" src="/src/resources/icon/02.png" alt="">
+                        <img src="/src/resources/img/dag.png" class="w-100 garden__img" alt="">
+
                     </div>
                 </div>
-                <div class="col-4 p-0 d-flex justify-content-end">
-                    <div class="garden__item d-flex flex-column gap-3">
+                <div class="col-12 text-left-md col-md-4">
+                    <div class="garden__item d-flex flex-column gap-3  w-100">
                         <img class="garden__icon" src="/src/resources/icon/02.png" alt="">
                         <h3 class="h3">BAĞ</h3>
                         <p class="mb-3">Lorem Ipsum is simply dummy
                             text
                             of the printing and typesetting industry. Lorem Ipsum has been
                             the industry’s standard dummy text ever since the 1500s.</p>
-                        <img src="/src/resources/img/yasilliq.png" class="w-100" alt="">
+                        <img src="/src/resources/img/yasilliq.png" class="w-100 garden__img" alt="">
                     </div>
                 </div>
             </div>
@@ -357,7 +365,7 @@
                 <div></div>
                 <div class="row mt-5">
                     <div class="col-lg-3 px-0 text-center mb-5">
-                        <img src="/src/resources/img/footerlogo.png" alt="">
+                        <a class="getToIndex" href="index.html"><img src="/src/resources/img/footerlogo.png" alt=""></a>
                     </div>
                     <div class="col-lg-3 col-4">
                         <ul class="text-center d-flex flex-column gap-3">
@@ -394,7 +402,37 @@
             </div>
         </div>
     </footer>
+    <script type="module" src="src/js/app.js"></script>
 
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+
+            breakpoints: {
+                576: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+
+                },
+            },
+        });
+    </script>
 </body>
 
 
