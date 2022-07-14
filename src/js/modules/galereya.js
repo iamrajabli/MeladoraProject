@@ -3,11 +3,13 @@ export default function galereya(wrapperSelector, sliesSelector, dotsSelector, c
         slides = document.querySelectorAll(sliesSelector),
         dot = document.querySelector(dotsSelector),
         container = document.querySelector(containerSelector);
-        
-    let width = container.offsetWidth,
+
+    let width = container ? container.offsetWidth : null,
         offset = 0;
 
-    wrapper.style.width = slides.length * width + 'px';
+    if (wrapper) {
+        wrapper.style.width = slides.length * width + 'px';
+    }
 
     slides.forEach((item, i) => {
         const li = document.createElement('li');
@@ -28,14 +30,18 @@ export default function galereya(wrapperSelector, sliesSelector, dotsSelector, c
     })
 
     window.addEventListener('resize', () => {
-        width = container.offsetWidth;
-        wrapper.style.width = slides.length * width + 'px';
+        width = container ? container.offsetWidth : null;
+        if (wrapper) {
+            wrapper.style.width = slides.length * width + 'px';
+        }
         offset = 0;
         showGalery(offset);
     })
 
     function showGalery(offset) {
-        wrapper.style.transform = `translateX(-${offset}px)`;
+        if (wrapper) {
+            wrapper.style.transform = `translateX(-${offset}px)`;
+        }
     }
 
     function showActive(id) {
